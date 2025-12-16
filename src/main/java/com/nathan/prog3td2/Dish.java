@@ -15,6 +15,12 @@ public class Dish {
     private DishTypeEnum dishType;
     private List<Ingredient> ingredients;
 
+    public Dish(int id, String name, DishTypeEnum dishType) {
+        this.id = id;
+        this.name = name;
+        this.dishType = dishType;
+    }
+
     public double getDishPrice(){
         return ingredients.stream()
                 .mapToDouble(Ingredient::getPrice)
